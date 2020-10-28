@@ -1,0 +1,27 @@
+{
+  "name": "@webpack-config-suite/example-typescript",
+  "version": "1.0.0",
+  "license": "MIT",
+  "peerDependencies": {
+    "ts-node": "*",
+    "webpack": "*"
+  },
+  "dependencies": {
+    "react-dom": "^17",
+    "react": "17"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.54",
+    "@types/react-dom": "^16.9.9",
+    "@webpack-config-suite/core": "*",
+    "@webpack-config-suite/babel": "*",
+    "@webpack-config-suite/typescript": "*",
+    "@webpack-config-suite/styles": "*",
+    "@webpack-config-suite/development": "*",
+    "typescript": "*",
+    "webpack-cli": "^3.3.12"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

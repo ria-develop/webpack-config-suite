@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "lib": [
+      "DOM.Iterable",
+      "DOM",
+      "ES6",
+      "ES2015.Collection",
+      "ES2015.Iterable",
+      "ESNext"
+    ],
+    "newLine": "lf",
+    "inlineSourceMap": true,
+    "declaration": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "checkJs": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "preserveSymlinks": true,
+  }
+}

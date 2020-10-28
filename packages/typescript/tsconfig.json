@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "sourceRoot": "../src",
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "declarationDir": "./types"
+  },
+  "include": [
+    "./src"
+  ],
+  "references": [
+    {
+      "path": "../core"
+    },
+    {
+      "path": "../babel"
+    }
+  ]
+}

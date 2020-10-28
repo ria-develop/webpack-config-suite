@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" given TypeScriptConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.ts/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" given TypeScriptReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.tsx\\?/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {
+    "extensions": Array [
+      ".tsx",
+    ],
+  },
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" given TypeScriptConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.ts/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "plugins": Array [
+                "react-hot-loader/babel",
+              ],
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" given TypeScriptReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.tsx\\?/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "plugins": Array [
+                "react-hot-loader/babel",
+              ],
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {
+    "alias": Object {
+      "react-dom": "@hot-loader/react-dom",
+    },
+    "extensions": Array [
+      ".tsx",
+    ],
+  },
+  "target": "web",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" given TypeScriptConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.ts/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" given TypeScriptReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.tsx\\?/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    ForkTsCheckerWebpackPlugin {
+      "options": Object {
+        "eslint": Object {
+          "enabled": true,
+          "files": "./src/**/*.{ts,tsx,js,jsx}",
+        },
+        "typescript": Object {
+          "diagnosticOptions": Object {
+            "semantic": true,
+            "syntactic": true,
+          },
+        },
+      },
+    },
+  ],
+  "resolve": Object {
+    "extensions": Array [
+      ".tsx",
+    ],
+  },
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" given TypeScriptConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.ts/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": 2000,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" given TypeScriptReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.tsx\\?/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": 2000,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {
+    "extensions": Array [
+      ".tsx",
+    ],
+  },
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" given TypeScriptConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.ts/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": 2000,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": undefined,
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" given TypeScriptReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.tsx\\?/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": 2000,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+                Array [
+                  "@babel/preset-typescript",
+                ],
+              ],
+            },
+          },
+          Object {
+            "loader": "ts-loader",
+            "options": Object {
+              "happyPackMode": true,
+              "transpileOnly": true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": undefined,
+  "resolve": Object {
+    "extensions": Array [
+      ".tsx",
+    ],
+  },
+}
+`;

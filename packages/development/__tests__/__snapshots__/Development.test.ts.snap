@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given MyDevelopmentConfig should match snapshot should should match snapshot 1`] = `
+Object {
+  "devtool": "eval",
+  "mode": "development",
+  "plugins": Array [],
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given DevelopmentConfig should match snapshot 1`] = `
+Object {
+  "devtool": "eval",
+  "mode": "development",
+  "plugins": Array [
+    HtmlWebpackPlugin {
+      "assetJson": undefined,
+      "childCompilerHash": undefined,
+      "hash": undefined,
+      "options": Object {
+        "base": false,
+        "cache": true,
+        "chunks": "all",
+        "chunksSortMode": "auto",
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": "body",
+        "meta": Object {},
+        "minify": "auto",
+        "publicPath": "auto",
+        "scriptLoading": "blocking",
+        "showErrors": true,
+        "template": "./template.html",
+        "templateContent": false,
+        "templateParameters": [Function],
+        "title": "Webpack App",
+        "xhtml": false,
+      },
+      "version": 4,
+    },
+  ],
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true}" given DevelopmentConfig should match snapshot 1`] = `
+Object {
+  "devtool": "eval",
+  "mode": "development",
+  "plugins": Array [
+    HtmlWebpackPlugin {
+      "assetJson": undefined,
+      "childCompilerHash": undefined,
+      "hash": undefined,
+      "options": Object {
+        "base": false,
+        "cache": true,
+        "chunks": "all",
+        "chunksSortMode": "auto",
+        "compile": true,
+        "excludeChunks": Array [],
+        "favicon": false,
+        "filename": "index.html",
+        "hash": false,
+        "inject": "body",
+        "meta": Object {},
+        "minify": "auto",
+        "publicPath": "auto",
+        "scriptLoading": "blocking",
+        "showErrors": true,
+        "template": "./template.html",
+        "templateContent": false,
+        "templateParameters": [Function],
+        "title": "Webpack App",
+        "xhtml": false,
+      },
+      "version": 4,
+    },
+  ],
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given DevelopmentConfig should match snapshot 1`] = `
+Object {
+  "devtool": "eval",
+  "mode": "development",
+  "plugins": Array [],
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "%j" given DevelopmentConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "plugins": Array [],
+}
+`;

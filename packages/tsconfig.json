@@ -1,0 +1,27 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false
+  },
+  "references": [
+    {
+      "path": "./core"
+    },
+    {
+      "path": "./babel"
+    },
+    {
+      "path": "./development"
+    },
+    {
+      "path": "./styles"
+    },
+    {
+      "path": "./typescript"
+    }
+  ],
+  "include": [
+    "./**/src/*"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "sourceRoot": "../src",
+    "baseUrl": "./src",
+    "rootDir": "./",
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "config/**/*",
+    "src/**/*"
+  ]
+}

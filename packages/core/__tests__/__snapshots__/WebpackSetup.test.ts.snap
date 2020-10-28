@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given empty setup should match snapshot 1`] = `
+Array [
+  Object {
+    "mode": "production",
+  },
+  Object {
+    "mode": "development",
+  },
+]
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" should match snapshot 1`] = `
+Array [
+  Object {
+    "mode": "production",
+    "name": "MyConfig MyAnotherConfig MyConfigModifierFunction MyConfigModifierNestedFunction",
+  },
+  Object {
+    "mode": "development",
+    "name": "MyConfig MyAnotherConfig MyConfigModifierFunction MyConfigModifierNestedFunction",
+  },
+]
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" should match snapshot 1`] = `
+Array [
+  Object {
+    "mode": "production",
+    "name": "MyConfig MyAnotherConfig MyConfigModifierFunction MyConfigModifierNestedFunction",
+  },
+]
+`;
+
+exports[`given multiple configs for use should match snapshot 1`] = `
+Array [
+  Object {
+    "mode": "production",
+    "name": "MyConfig MyAnotherConfig",
+  },
+  Object {
+    "mode": "development",
+    "name": "MyConfig MyAnotherConfig",
+  },
+]
+`;

@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given BabelConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.js\\$/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "plugins": Array [
+                "react-hot-loader/babel",
+              ],
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given BabelReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.jsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "plugins": Array [
+                "react-hot-loader/babel",
+              ],
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {
+    "alias": Object {
+      "react-dom": "@hot-loader/react-dom",
+    },
+  },
+  "target": "web",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given HotModuleReplacementConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {
+    "alias": Object {
+      "react-dom": "@hot-loader/react-dom",
+    },
+  },
+  "target": "web",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given BabelConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.js\\$/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given BabelReactConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.jsx\\?\\$/,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+          Object {
+            "loader": "babel-loader",
+            "options": Object {
+              "presets": Array [
+                Array [
+                  "@babel/preset-env",
+                ],
+                Array [
+                  "@babel/preset-react",
+                ],
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given HotModuleReplacementConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {},
+}
+`;

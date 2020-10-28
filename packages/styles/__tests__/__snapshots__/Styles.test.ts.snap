@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given CssConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.css/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": true,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    MiniCssExtractPlugin {
+      "options": Object {
+        "chunkFilename": "[name].css",
+        "filename": "[name].css",
+        "ignoreOrder": false,
+      },
+      "runtimeOptions": Object {
+        "attributes": "",
+        "insert": "document.head.appendChild(linkTag);",
+        "linkType": "text/css",
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"hot":true}" given LessConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.less/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": true,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+          "less-loader",
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true}" given CssConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.css/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": undefined,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    MiniCssExtractPlugin {
+      "options": Object {
+        "chunkFilename": "[name].css",
+        "filename": "[name].css",
+        "ignoreOrder": false,
+      },
+      "runtimeOptions": Object {
+        "attributes": "",
+        "insert": "document.head.appendChild(linkTag);",
+        "linkType": "text/css",
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true}" given LessConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.less/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": undefined,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+          "less-loader",
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given CssConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.css/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": undefined,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    MiniCssExtractPlugin {
+      "options": Object {
+        "chunkFilename": "[name].css",
+        "filename": "[name].css",
+        "ignoreOrder": false,
+      },
+      "runtimeOptions": Object {
+        "attributes": "",
+        "insert": "document.head.appendChild(linkTag);",
+        "linkType": "text/css",
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given LessConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.less/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": undefined,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": true,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+          "less-loader",
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{}" given CssConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.css/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": false,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": false,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+  "plugins": Array [
+    MiniCssExtractPlugin {
+      "options": Object {
+        "chunkFilename": "[name].css",
+        "filename": "[name].css",
+        "ignoreOrder": false,
+      },
+      "runtimeOptions": Object {
+        "attributes": "",
+        "insert": "document.head.appendChild(linkTag);",
+        "linkType": "text/css",
+      },
+    },
+  ],
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{}" given LessConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": /\\\\\\.less/,
+        "use": Array [
+          "style-loader",
+          Object {
+            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "options": Object {
+              "esModule": false,
+              "hmr": false,
+              "reloadAll": true,
+            },
+          },
+          Object {
+            "loader": "css-loader",
+            "options": Object {
+              "sourceMap": false,
+            },
+          },
+          Object {
+            "loader": "postcss-loader",
+            "options": Object {
+              "postcssOptions": Object {
+                "plugins": Array [
+                  Array [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
+          },
+          "less-loader",
+        ],
+      },
+    ],
+  },
+  "resolve": Object {},
+}
+`;

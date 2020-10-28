@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": Infinity,
+              "workers": 7,
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 2`] = `
+Object {
+  "mode": "development",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [],
+      },
+    ],
+  },
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 1`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [
+          Object {
+            "loader": "cache-loader",
+          },
+          Object {
+            "loader": "thread-loader",
+            "options": Object {
+              "poolTimeout": 2000,
+              "workers": 7,
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 2`] = `
+Object {
+  "mode": "production",
+  "module": Object {
+    "rules": Array [
+      Object {
+        "exclude": /node_modules/,
+        "test": undefined,
+        "use": Array [],
+      },
+    ],
+  },
+}
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{}" should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {},
+}
+`;

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" should match snapshot 1`] = `
+Object {
+  "composed": Array [],
+  "isDev": true,
+  "isHot": undefined,
+  "isLiveReload": false,
+  "isProd": false,
+  "isSingleOrDevMode": true,
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" should match snapshot 1`] = `
+Object {
+  "composed": Array [],
+  "isDev": true,
+  "isHot": true,
+  "isLiveReload": true,
+  "isProd": false,
+  "isSingleOrDevMode": true,
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" should match snapshot 1`] = `
+Object {
+  "composed": Array [],
+  "isDev": true,
+  "isHot": undefined,
+  "isLiveReload": undefined,
+  "isProd": false,
+  "isSingleOrDevMode": true,
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" should match snapshot 1`] = `
+Object {
+  "composed": Array [],
+  "isDev": false,
+  "isHot": false,
+  "isLiveReload": true,
+  "isProd": true,
+  "isSingleOrDevMode": false,
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" should match snapshot 1`] = `
+Object {
+  "composed": Array [],
+  "isDev": false,
+  "isHot": undefined,
+  "isLiveReload": undefined,
+  "isProd": true,
+  "isSingleOrDevMode": true,
+}
+`;

@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" given CustomEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Array [
+      "./src/index.tsx",
+      "./src/main.css",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" given DefaultObjectEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "main": "./src",
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" given MultipleEntries should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Object {
+      "dependOn": "react-vendors",
+      "import": Array [
+        "./src/index.tsx",
+        "./src/main.css",
+      ],
+    },
+    "react-vendors": Array [
+      "react",
+      "react-dom",
+      "prop-types",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" given CustomEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Array [
+      "./src/index.hot.tsx",
+      "./src/main.css",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" given DefaultObjectEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "main": "./src",
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" given MultipleEntries should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Object {
+      "dependOn": "react-vendors",
+      "import": Array [
+        "./src/index.hot.tsx",
+        "./src/main.css",
+      ],
+    },
+    "react-vendors": Array [
+      "react",
+      "react-dom",
+      "prop-types",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" given CustomEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Array [
+      "./src/index.tsx",
+      "./src/main.css",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" given DefaultObjectEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "main": "./src",
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" given MultipleEntries should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Object {
+      "dependOn": "react-vendors",
+      "import": Array [
+        "./src/index.tsx",
+        "./src/main.css",
+      ],
+    },
+    "react-vendors": Array [
+      "react",
+      "react-dom",
+      "prop-types",
+    ],
+  },
+  "mode": "development",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" given CustomEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Array [
+      "./src/index.tsx",
+      "./src/main.css",
+    ],
+  },
+  "mode": "production",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" given DefaultObjectEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "main": "./src",
+  },
+  "mode": "production",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" given MultipleEntries should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Object {
+      "dependOn": "react-vendors",
+      "import": Array [
+        "./src/index.tsx",
+        "./src/main.css",
+      ],
+    },
+    "react-vendors": Array [
+      "react",
+      "react-dom",
+      "prop-types",
+    ],
+  },
+  "mode": "production",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" given CustomEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Array [
+      "./src/index.tsx",
+      "./src/main.css",
+    ],
+  },
+  "mode": "production",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" given DefaultObjectEntryConfig should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "main": "./src",
+  },
+  "mode": "production",
+}
+`;
+
+exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" given MultipleEntries should match snapshot 1`] = `
+Object {
+  "entry": Object {
+    "app-name": Object {
+      "dependOn": "react-vendors",
+      "import": Array [
+        "./src/index.tsx",
+        "./src/main.css",
+      ],
+    },
+    "react-vendors": Array [
+      "react",
+      "react-dom",
+      "prop-types",
+    ],
+  },
+  "mode": "production",
+}
+`;
