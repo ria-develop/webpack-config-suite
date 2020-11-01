@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
+    "composite": true,
     "sourceRoot": "../src",
     "baseUrl": "./src",
     "rootDir": "./",
@@ -14,5 +15,10 @@
   "include": [
     "config/**/*",
     "src/**/*"
+  ],
+  "references": [
+    {
+      "path": "../../packages/core"
+    }
   ]
 }
