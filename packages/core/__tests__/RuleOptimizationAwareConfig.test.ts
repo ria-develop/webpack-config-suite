@@ -9,13 +9,20 @@ describe.each([
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
     it('given CacheThreadRuleAwareConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new CacheThreadRuleAwareConfig(config, env, argv);
+      class MyCacheThreadRuleAwareConfig extends CacheThreadRuleAwareConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyCacheThreadRuleAwareConfig(config, env, argv);
       expect(config).toMatchSnapshot();
     });
     it('given CacheThreadRuleAwareConfig should match snapshot', () => {
       const config: Configuration = {mode};
-      class MyRuleOptimizationAwareConfig extends CacheThreadRuleAwareConfig {
+      class MyCacheThreadRuleAwareConfig extends CacheThreadRuleAwareConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
         protected get useCache(): boolean {
           return false;
         }
@@ -24,7 +31,7 @@ describe.each([
           return false;
         }
       }
-      new MyRuleOptimizationAwareConfig(config, env, argv);
+      new MyCacheThreadRuleAwareConfig(config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }

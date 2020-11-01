@@ -8,14 +8,22 @@ describe.each(TestCases)(
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
     it('given TypeScriptConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new TypeScriptConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyTypeScriptConfig extends TypeScriptConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyTypeScriptConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       expect(config).toMatchSnapshot();
     });
     it('given TypeScriptReactConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new TypeScriptReactConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyTypeScriptReactConfig extends TypeScriptReactConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyTypeScriptReactConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       expect(config).toMatchSnapshot();
     });
   }

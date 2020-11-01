@@ -16,7 +16,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -79,7 +79,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -149,7 +149,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -215,7 +215,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -292,7 +292,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -355,7 +355,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": Infinity,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -425,7 +425,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": 2000,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -472,7 +472,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": 2000,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -526,7 +526,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": 2000,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {
@@ -574,7 +574,7 @@ Object {
             "loader": "thread-loader",
             "options": Object {
               "poolTimeout": 2000,
-              "workers": 7,
+              "workers": 1,
             },
           },
           Object {

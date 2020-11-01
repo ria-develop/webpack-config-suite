@@ -10,14 +10,22 @@ describe.each([
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
     it('given BabelConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new BabelConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyBabelConfig extends BabelConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyBabelConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       expect(config).toMatchSnapshot();
     });
     it('given BabelReactConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new BabelReactConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyBabelReactConfig extends BabelReactConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyBabelReactConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       expect(config).toMatchSnapshot();
     });
     it('given HotModuleReplacementConfig should match snapshot', () => {

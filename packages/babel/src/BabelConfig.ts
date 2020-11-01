@@ -1,9 +1,14 @@
-import {BaseConfig, CacheThreadRuleAwareConfig, getLoader, JsExtension} from '@webpack-config-suite/core';
+import {
+  BabelLoaderOptions as BabelLoaderOptionsFromSchema,
+  BaseConfig,
+  CacheThreadRuleAwareConfig,
+  getLoader,
+  JsExtension
+} from '@webpack-config-suite/core';
 import {RuleSetUseItem} from 'webpack';
 import {PluginItem} from '@babel/core';
 import {Options as BabelPresetEnvOptions} from '@babel/preset-env';
 
-import {Schema as BabelLoaderOptionsFromSchema} from '@webpack-config-suite/core/types/babel-loader';
 import {TransformOptions} from 'babel__core';
 
 export type BabelLoaderOptions = TransformOptions & BabelLoaderOptionsFromSchema;

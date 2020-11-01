@@ -7,12 +7,16 @@ export class CacheThreadRuleAwareConfig extends RuleSetAwareConfig {
     return {loader: 'cache-loader'};
   }
 
+  protected get numWorkers(): number {
+    return os.cpus().length - 1;
+  }
+
   protected get threadLoader(): RuleSetUseItem {
     return {
       loader: 'thread-loader',
       options: {
         poolTimeout: this.isDev ? Infinity : 2000,
-        workers: os.cpus().length - 1
+        workers: this.numWorkers
       }
     };
   }

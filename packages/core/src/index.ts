@@ -1,21 +1,6 @@
 import {Configuration} from 'webpack';
 import {BaseConfig} from './BaseConfig';
 
-// Temporarily
-declare interface Argument {
-  description: string;
-  simpleType: 'string' | 'number' | 'boolean';
-  multiple: boolean;
-  configs: ArgumentConfig[];
-}
-declare interface ArgumentConfig {
-  description: string;
-  path: string;
-  multiple: boolean;
-  type: 'string' | 'number' | 'boolean' | 'path' | 'enum' | 'RegExp' | 'reset';
-  values?: any[];
-}
-
 export * from './BaseConfig';
 export * from './AliasAwareConfig';
 export * from './EntryConfig';
@@ -39,11 +24,12 @@ export type {Options as CacheLoaderOptions} from '../types/cache-loader';
 export type {Schema as BabelLoaderOptions} from '../types/babel-loader';
 
 export type WebpackCliOptions = {
-  mode: Configuration['mode'];
+  mode?: Configuration['mode'];
   liveReload?: boolean;
   hot?: boolean;
   hotOnly?: boolean;
-} & Record<string, Argument>;
+  [key: string]: any;
+};
 
 export type What = typeof BaseConfig | ConfigHandler | (typeof BaseConfig | ConfigHandler)[];
 export type ConfigHandler = (config: Configuration, env: unknown, argv: WebpackCliOptions) => What[] | void;

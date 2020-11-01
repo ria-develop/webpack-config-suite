@@ -27,15 +27,23 @@ describe.each([
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
     it('given CssConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new CssConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyCssConfig extends CssConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyCssConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       config.module.rules = config.module.rules.map<RuleSetRule>(fixPaths);
       expect(config).toMatchSnapshot();
     });
     it('given LessConfig should match snapshot', () => {
       const config: Configuration = {mode};
-
-      new LessConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      class MyLessConfig extends LessConfig {
+        protected get numWorkers(): number {
+          return 1;
+        }
+      }
+      new MyLessConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
       config.module.rules = config.module.rules.map<RuleSetRule>(fixPaths);
       expect(config).toMatchSnapshot();
     });
