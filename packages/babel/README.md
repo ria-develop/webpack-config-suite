@@ -1,11 +1,18 @@
 # `@webpack-config-suite/babel`
 
-> TODO: description
+The utility to create flexible and shareable webpack configurations for complex projects
 
 ## Usage
 
-```
-const babel = require('@webpack-config-suite/babel');
+example TypeScript 
 
-// TODO: DEMONSTRATE API
+**webpack.config.ts**
+```typescript
+import {WebpackSetup} from '@webpack-config-suite/core';
+import {BabelReactConfig} from '@webpack-config-suite/babel';
+
+export default WebpackSetup.newSetup()
+  .use(BabelReactConfig)
+  .newFactory();
+
 ```

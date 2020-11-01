@@ -1,4 +1,4 @@
-# `@webpack-config-suite/typescript`
+# `@webpack-config-suite/core`
 
 The utility to create flexible and shareable webpack configurations for complex projects
 
@@ -9,11 +9,7 @@ example TypeScript
 **webpack.config.ts**
 ```typescript
 import {WebpackSetup} from '@webpack-config-suite/core';
-import {TypeScriptReactConfig} from '@webpack-config-suite/typescript';
 
-
-export default WebpackSetup.newSetup()
-  .use(TypeScriptReactConfig)
-  .newFactory();
+export default WebpackSetup.newSetup().newFactory();
 
 ```

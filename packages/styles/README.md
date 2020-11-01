@@ -1,11 +1,20 @@
 # `@webpack-config-suite/styles`
 
-> TODO: description
+The utility to create flexible and shareable webpack configurations for complex projects
 
 ## Usage
 
-```
-const styles = require('@webpack-config-suite/styles');
+example TypeScript 
 
-// TODO: DEMONSTRATE API
+**webpack.config.ts**
+```typescript
+import {WebpackSetup} from '@webpack-config-suite/core';
+import {CssConfig, LessConfig} from '@webpack-config-suite/styles';
+
+
+export default WebpackSetup.newSetup()
+  .use(CssConfig)
+  .use(LessConfig)
+  .newFactory();
+
 ```
