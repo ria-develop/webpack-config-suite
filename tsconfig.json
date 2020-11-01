@@ -27,6 +27,9 @@
     "paths": {
       "@webpack-config-suite/*": [
         "./packages/*/src"
+      ],
+      "@webpack-config-suite/example-typescript": [
+        "./packages/example-typescript/src"
       ]
     }
   },

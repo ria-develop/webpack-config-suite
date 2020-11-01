@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
-    "composite": true,
     "sourceRoot": "../src",
-    "baseUrl": "./src",
     "rootDir": "./",
     "noEmit": true,
     "jsx": "react",
@@ -11,10 +9,6 @@
   },
   "exclude": [
     "node_modules"
-  ],
-  "include": [
-    "config/**/*",
-    "src/**/*"
   ],
   "references": [
     {
