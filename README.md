@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ria-develop/webpack-config-suite.svg?branch=master)](https://travis-ci.org/ria-develop/webpack-config-suite)
+
 # `webpack-config-suite`
 
 The utility to create flexible and shareable webpack configurations for complex projects
