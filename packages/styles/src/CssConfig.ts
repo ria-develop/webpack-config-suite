@@ -1,17 +1,17 @@
 import {
   BaseConfig,
-  getLoader,
-  ExtractCssLoaderOptions,
-  StyleLoaderOptions,
-  PostCssLoaderOptions,
+  CacheThreadRuleAwareConfig,
   CssLoaderOptions,
-  RuleOptimizationAwareConfig
+  ExtractCssLoaderOptions,
+  getLoader,
+  PostCssLoaderOptions,
+  StyleLoaderOptions
 } from '@webpack-config-suite/core';
 import {CssExtension, CssPlugins} from './index';
 import {RuleSetUseItem} from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export class CssConfig extends RuleOptimizationAwareConfig {
+export class CssConfig extends CacheThreadRuleAwareConfig {
   public get composed(): typeof BaseConfig[] {
     return [CssExtension, CssPlugins];
   }

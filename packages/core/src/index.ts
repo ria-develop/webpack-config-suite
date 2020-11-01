@@ -10,7 +10,7 @@ export * from './JsExtension';
 export * from './WebpackSetup';
 export * from './ObjectEntryConfig';
 export * from './ResolveAwareConfig';
-export * from './RuleOptimizationAwareConfig';
+export * from './CacheThreadRuleAwareConfig';
 export * from './RuleSetAwareConfig';
 export * from './PluginsAwareConfig';
 export * from './Utils';

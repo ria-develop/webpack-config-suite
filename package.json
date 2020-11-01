@@ -14,7 +14,9 @@
     "watch": "yarn build -w",
     "clean:build": "yarn clean && yarn build",
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
-    "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts"
+    "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
+    "test": "lerna run test -- --coverage",
+    "test:watch": "lerna run test --parallel -- --coverage --watchAll"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -45,26 +47,6 @@
   "eslintConfig": {
     "extends": [
       "@ria-develop"
-    ]
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "displayName": {
-      "name": "webpack-config-suite",
-      "color": "blue"
-    },
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
-    },
-    "collectCoverageFrom": [
-      "packages/**/src/*.{js,jsx,ts,tsx}",
-      "!**/node_modules/**"
     ]
   },
   "dependencies": {

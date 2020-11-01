@@ -11,7 +11,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": true,
@@ -69,7 +69,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": true,
@@ -114,7 +114,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": undefined,
@@ -172,7 +172,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": undefined,
@@ -217,7 +217,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": undefined,
@@ -275,7 +275,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": undefined,
@@ -320,7 +320,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": false,
@@ -378,7 +378,7 @@ Object {
         "use": Array [
           "style-loader",
           Object {
-            "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
+            "loader": "../../node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
               "hmr": false,

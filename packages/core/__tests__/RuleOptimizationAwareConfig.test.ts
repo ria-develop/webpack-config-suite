@@ -1,4 +1,4 @@
-import {RuleOptimizationAwareConfig, WebpackCliOptions} from '../src';
+import {CacheThreadRuleAwareConfig, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
 
 describe.each([
@@ -7,15 +7,15 @@ describe.each([
 ])(
   'given mode: "%s", env: "%j", argv: "%j"',
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
-    it('given RuleOptimizationAwareConfig should match snapshot', () => {
+    it('given CacheThreadRuleAwareConfig should match snapshot', () => {
       const config: Configuration = {mode};
 
-      new RuleOptimizationAwareConfig(config, env, argv);
+      new CacheThreadRuleAwareConfig(config, env, argv);
       expect(config).toMatchSnapshot();
     });
-    it('given RuleOptimizationAwareConfig should match snapshot', () => {
+    it('given CacheThreadRuleAwareConfig should match snapshot', () => {
       const config: Configuration = {mode};
-      class MyRuleOptimizationAwareConfig extends RuleOptimizationAwareConfig {
+      class MyRuleOptimizationAwareConfig extends CacheThreadRuleAwareConfig {
         protected get useCache(): boolean {
           return false;
         }

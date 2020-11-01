@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`given mode: "development", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 1`] = `
+exports[`given mode: "development", env: "undefined", argv: "{}" given CacheThreadRuleAwareConfig should match snapshot 1`] = `
 Object {
   "mode": "development",
   "module": Object {
@@ -26,7 +26,7 @@ Object {
 }
 `;
 
-exports[`given mode: "development", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 2`] = `
+exports[`given mode: "development", env: "undefined", argv: "{}" given CacheThreadRuleAwareConfig should match snapshot 2`] = `
 Object {
   "mode": "development",
   "module": Object {
@@ -41,7 +41,7 @@ Object {
 }
 `;
 
-exports[`given mode: "production", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 1`] = `
+exports[`given mode: "production", env: "undefined", argv: "{}" given CacheThreadRuleAwareConfig should match snapshot 1`] = `
 Object {
   "mode": "production",
   "module": Object {
@@ -67,7 +67,7 @@ Object {
 }
 `;
 
-exports[`given mode: "production", env: "undefined", argv: "{}" given RuleOptimizationAwareConfig should match snapshot 2`] = `
+exports[`given mode: "production", env: "undefined", argv: "{}" given CacheThreadRuleAwareConfig should match snapshot 2`] = `
 Object {
   "mode": "production",
   "module": Object {

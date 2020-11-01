@@ -2,7 +2,7 @@ import {RuleSetAwareConfig} from './RuleSetAwareConfig';
 import {RuleSetUseItem} from 'webpack';
 import * as os from 'os';
 
-export class RuleOptimizationAwareConfig extends RuleSetAwareConfig {
+export class CacheThreadRuleAwareConfig extends RuleSetAwareConfig {
   protected get cacheLoader(): RuleSetUseItem {
     return {loader: 'cache-loader'};
   }
