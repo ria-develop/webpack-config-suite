@@ -19,9 +19,8 @@
   ],
   "scripts": {
     "test": "jest",
-    "clean": "yarn postinstall",
-    "build": "tsc",
-    "postinstall": "sh -c 'rm -rf types lib' && sh -c 'mkdir -p types' & node compileSchemas.js"
+    "build": "tsc -b .",
+    "prebuild": "node compileSchemas.js"
   },
   "optionalDependencies": {
     "react": "^17.0.1",

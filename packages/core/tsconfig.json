@@ -1,10 +1,8 @@
 {
-  "extends": "../tsconfig",
+  "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
-    "sourceRoot": "../src",
-    "baseUrl": "./src",
-    "outDir": "./lib",
     "rootDir": "./src",
+    "outDir": "./lib",
     "declarationDir": "./types"
   },
   "include": [

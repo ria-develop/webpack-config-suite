@@ -15,6 +15,8 @@ const fs = require('fs').promises;
     //'webpack/schemas/WebpackOptions.json'
   ];
 
+  await fs.mkdir('./types');
+
   const getName = (schema) => {
     if (schema === 'mini-css-extract-plugin/dist/loader-options.json') {
       return 'mini-css-extract-loader';

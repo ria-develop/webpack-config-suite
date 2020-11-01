@@ -7,11 +7,12 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "clean": "lerna run clean && find ./ -type f -name *.tsbuildinfo -delete",
+    "build-packages": "tsc -b packages",
     "build": "lerna run build",
-    "test": "jest --coverage",
-    "tsc-project-references-build": "cd packages && tsc -b -v",
-    "watch": "yarn build -- --parallel -- -w --preserveWatchOutput",
+    "prebuild": "lerna run prebuild",
+    "clean": "lerna exec -- rm -rf lib cjs dist types *.tsbuildinfo",
+    "watch": "yarn build -w",
+    "clean:build": "yarn clean && yarn build",
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts"
   },

@@ -19,7 +19,7 @@
   },
   "scripts": {
     "clean": "sh -c 'rm -rf types lib'",
-    "build": "tsc",
+    "build": "tsc -b .",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {

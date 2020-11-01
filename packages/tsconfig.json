@@ -1,27 +1,21 @@
 {
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "composite": true,
-    "noEmit": false
-  },
+  "files": [],
   "references": [
     {
-      "path": "./core"
+      "path": "core"
     },
     {
-      "path": "./babel"
+      "path": "babel"
     },
     {
-      "path": "./development"
+      "path": "development"
     },
     {
-      "path": "./styles"
+      "path": "styles"
     },
     {
-      "path": "./typescript"
+      "path": "typescript"
     }
-  ],
-  "include": [
-    "./**/src/*"
   ]
+
 }
