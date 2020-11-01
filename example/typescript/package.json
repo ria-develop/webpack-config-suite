@@ -11,7 +11,7 @@
     "react-dom": "^17"
   },
   "devDependencies": {
-    "@types/react": "^16.9.54",
+    "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
     "@webpack-config-suite/babel": "^1.0.0",
     "@webpack-config-suite/core": "^1.0.0",
@@ -19,7 +19,8 @@
     "@webpack-config-suite/styles": "^1.0.0",
     "@webpack-config-suite/typescript": "^1.0.0",
     "typescript": "*",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "browserslist": [
     "last 2 versions"

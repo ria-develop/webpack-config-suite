@@ -10,8 +10,8 @@ const fs = require('fs').promises;
     'style-loader/dist/options.json',
     'postcss-loader/dist/options.json',
     'mini-css-extract-plugin/dist/loader-options.json',
-    'mini-css-extract-plugin/dist/plugin-options.json',
-    'webpack-cli/bin/config/optionsSchema.json'
+    'mini-css-extract-plugin/dist/plugin-options.json'
+    // 'webpack-cli/bin/config/optionsSchema.json'
     //'webpack/schemas/WebpackOptions.json'
   ];
 

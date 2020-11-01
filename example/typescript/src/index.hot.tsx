@@ -3,4 +3,6 @@ import * as React from 'react';
 import {render} from 'react-dom';
 import App from './App';
 
-render(React.createElement(hot(App)), document.querySelector('#root'));
+const HotApp = hot(App);
+
+render(<HotApp />, document.querySelector('#root'));

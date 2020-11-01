@@ -26,3 +26,9 @@ export default WebpackSetup.newSetup()
   .newFactory();
 
 ```
+
+### Run example
+
+```shell script
+git clone https://github.com/ria-develop/webpack-config-suite.git && cd webpack-config-suite && yarn && cd example/typescript && webpack serve
+```
