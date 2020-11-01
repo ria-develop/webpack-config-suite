@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --hot"
+    "start": "webpack serve --hot --mode=development"
   },
   "peerDependencies": {
     "ts-node": "*",
