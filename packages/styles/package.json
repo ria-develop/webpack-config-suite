@@ -1,6 +1,6 @@
 {
   "name": "@webpack-config-suite/styles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "> TODO: description",
   "author": "RIA-DEVELOP <github@ria-develop.pl>",
   "homepage": "",
@@ -23,6 +23,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@webpack-config-suite/core": "^1.0.0"
+    "@webpack-config-suite/core": "^1.0.1"
   }
 }
