@@ -2,6 +2,9 @@
   "name": "@webpack-config-suite/example-typescript",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --hot"
+  },
   "peerDependencies": {
     "ts-node": "*",
     "webpack": "*"

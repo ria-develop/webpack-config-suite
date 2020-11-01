@@ -14,7 +14,8 @@
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
     "test": "lerna run test -- --coverage",
-    "test:watch": "lerna run test --parallel -- --coverage --watchAll"
+    "test:watch": "lerna run test --parallel -- --coverage --watchAll",
+    "example:run": "lerna run start --stream"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
