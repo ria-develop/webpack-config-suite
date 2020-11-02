@@ -2,6 +2,7 @@ export default {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   preset: 'ts-jest',
+  roots: ['<rootDir>/src', '<rootDir>/__tests__'],
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.jest.json'
