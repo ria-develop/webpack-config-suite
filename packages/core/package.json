@@ -18,9 +18,10 @@
     "types"
   ],
   "scripts": {
-    "test": "jest",
     "build": "tsc -b .",
-    "prebuild": "node compileSchemas.js"
+    "prebuild": "node compileSchemas.js",
+    "test": "jest",
+    "coveralls": "coveralls < coverage/lcov.info"
   },
   "optionalDependencies": {
     "react": "^17.0.1",

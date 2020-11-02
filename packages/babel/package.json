@@ -23,7 +23,8 @@
   "scripts": {
     "clean": "sh -c 'rm -rf types lib'",
     "build": "tsc -b .",
-    "test": "jest"
+    "test": "jest",
+    "coveralls": "coveralls < coverage/lcov.info"
   },
   "dependencies": {
     "@webpack-config-suite/core": "^1.0.1"

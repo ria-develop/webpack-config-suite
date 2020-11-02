@@ -14,6 +14,7 @@
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
     "test": "lerna run test -- --coverage",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "test:watch": "lerna run test --parallel -- --coverage --watchAll",
     "example:run": "lerna run start --stream"
   },
@@ -49,6 +50,8 @@
     ]
   },
   "dependencies": {
+    "coveralls": "^3.1.0",
+    "coveralls-lerna": "^0.0.5",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
