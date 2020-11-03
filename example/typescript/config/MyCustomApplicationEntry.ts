@@ -1,7 +1,7 @@
-import {ObjectEntryConfig} from '@webpack-config-suite/core';
-import {Entry} from 'webpack';
+import {EntryObject} from '@webpack-config-suite/core';
+import {Entry as WebpackEntry} from 'webpack';
 
-export default class MyCustomApplicationEntry extends ObjectEntryConfig {
+export default class MyCustomApplicationEntry extends EntryObject {
   protected get sources(): string | [string, ...string[]] {
     return [`./src/index${(this.isHot && '.hot') || ''}.tsx`, './src/main.css'];
   }
@@ -14,7 +14,9 @@ export default class MyCustomApplicationEntry extends ObjectEntryConfig {
     return 'typescript-example';
   }
 
-  protected get entry(): Entry {
-    return Object.assign<Entry, Entry>(super.entry, {'react-vendors': {import: ['react', 'react-dom', 'prop-types']}});
+  protected get entry(): WebpackEntry {
+    return Object.assign<WebpackEntry, WebpackEntry>(super.entry, {
+      'react-vendors': {import: ['react', 'react-dom', 'prop-types']}
+    });
   }
 }

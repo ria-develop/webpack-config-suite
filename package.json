@@ -9,7 +9,7 @@
   "scripts": {
     "build-packages": "tsc -b packages",
     "build": "lerna run build",
-    "clean": "lerna exec -- rm -rf lib cjs dist types *.tsbuildinfo",
+    "clean": "lerna exec -- rm -rf lib cjs dist types coverage *.tsbuildinfo && rm -rf coverage && jest --clearCache",
     "watch": "yarn build -w",
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/node": "^7.12.1",
+    "@octokit/core": "^3.2.1",
     "@ria-develop/eslint-config": "*",
     "@types/babel__core": "^7.1.11",
     "@types/babel__preset-env": "^7.9.1",

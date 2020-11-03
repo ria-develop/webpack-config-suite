@@ -1,7 +1,7 @@
-import {ResolveAwareConfig} from './ResolveAwareConfig';
+import {Resolve} from './Resolve';
 import {Configuration} from 'webpack';
 
-export class AliasAwareConfig extends ResolveAwareConfig {
+export class ResolveAlias extends Resolve {
   protected get alias(): Configuration['resolve']['alias'] {
     return {};
   }

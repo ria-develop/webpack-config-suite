@@ -1,8 +1,11 @@
 [![Build Status](https://travis-ci.org/ria-develop/webpack-config-suite.svg?branch=master)](https://travis-ci.org/ria-develop/webpack-config-suite)
 [![Coverage Status](https://coveralls.io/repos/github/ria-develop/webpack-config-suite/badge.svg?branch=master)](https://coveralls.io/github/ria-develop/webpack-config-suite?branch=master)
 # `webpack-config-suite`
-
+## What is this?
 The utility to create flexible and shareable webpack configurations for complex projects
+
+## Requirements
+### Webpack >= 5
 
 ## Usage
 

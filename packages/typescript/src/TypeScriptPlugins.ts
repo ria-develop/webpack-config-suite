@@ -1,9 +1,9 @@
-import {PluginsAwareConfig} from '@webpack-config-suite/core/';
+import {Plugins} from '@webpack-config-suite/core/';
 import {Configuration} from 'webpack';
 import {ForkTsCheckerWebpackPlugin} from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPlugin';
 import {ForkTsCheckerWebpackPluginOptions} from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions';
 
-export class TypeScriptPlugins extends PluginsAwareConfig {
+export class TypeScriptPlugins extends Plugins {
   protected get forkTsCheckerOptions(): ForkTsCheckerWebpackPluginOptions {
     return {
       typescript: {

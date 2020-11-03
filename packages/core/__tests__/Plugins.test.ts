@@ -1,4 +1,4 @@
-import {PluginsAwareConfig, WebpackCliOptions} from '../src';
+import {Plugins, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
 
 describe.each([['development', undefined, {}]])(
@@ -7,7 +7,7 @@ describe.each([['development', undefined, {}]])(
     it('should match snapshot', () => {
       const config: Configuration = {mode};
 
-      class MyPluginsConfig extends PluginsAwareConfig {
+      class MyPluginsConfig extends Plugins {
         get plugins(): Configuration['plugins'] | undefined {
           return super['plugins'].concat([
             {
@@ -20,7 +20,7 @@ describe.each([['development', undefined, {}]])(
         }
       }
 
-      class MyOtherPluginsConfig extends PluginsAwareConfig {
+      class MyOtherPluginsConfig extends Plugins {
         get plugins(): Configuration['plugins'] | undefined {
           return super['plugins'].concat([
             {

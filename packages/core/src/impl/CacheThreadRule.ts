@@ -1,8 +1,8 @@
-import {RuleSetAwareConfig} from './RuleSetAwareConfig';
+import {ModuleRules} from '../ModuleRules';
 import {RuleSetUseItem} from 'webpack';
 import * as os from 'os';
 
-export class CacheThreadRuleAwareConfig extends RuleSetAwareConfig {
+export class CacheThreadRule extends ModuleRules {
   protected get cacheLoader(): RuleSetUseItem {
     return {loader: 'cache-loader'};
   }

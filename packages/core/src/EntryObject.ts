@@ -1,7 +1,7 @@
-import {EntryConfig} from './EntryConfig';
-import {Entry} from 'webpack';
+import {Entry} from './Entry';
+import {Entry as WebpackEntry} from 'webpack';
 
-export class ObjectEntryConfig extends EntryConfig {
+export class EntryObject extends Entry {
   protected get dependOn(): string | undefined {
     return undefined;
   }
@@ -10,7 +10,7 @@ export class ObjectEntryConfig extends EntryConfig {
     return 'main';
   }
 
-  protected get entry(): Entry {
+  protected get entry(): WebpackEntry {
     return {[this.name]: this.dependOn ? {import: this.sources, dependOn: this.dependOn} : this.sources};
   }
 }

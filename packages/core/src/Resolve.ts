@@ -2,13 +2,13 @@ import {BaseConfig} from './BaseConfig';
 import {Configuration} from 'webpack';
 import {WebpackCliOptions} from './index';
 
-export class PluginsAwareConfig extends BaseConfig {
-  get plugins(): Configuration['plugins'] | undefined {
-    return [];
+export class Resolve extends BaseConfig {
+  protected get resolve(): Configuration['resolve'] {
+    return this.config.resolve || {};
   }
 
   constructor(config: Configuration, env: unknown, argv: WebpackCliOptions) {
     super(config, env, argv);
-    config.plugins = config.plugins ? config.plugins.concat(this.plugins) : this.plugins;
+    this.config.resolve = this.resolve;
   }
 }

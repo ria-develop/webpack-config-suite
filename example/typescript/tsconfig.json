@@ -2,10 +2,8 @@
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
     "sourceRoot": "../src",
-    "rootDir": "./",
     "noEmit": true,
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true
+    "jsx": "react"
   },
   "exclude": [
     "node_modules"
@@ -13,6 +11,18 @@
   "references": [
     {
       "path": "../../packages/core"
+    },
+    {
+      "path": "../../packages/babel"
+    },
+    {
+      "path": "../../packages/styles"
+    },
+    {
+      "path": "../../packages/development"
+    },
+    {
+      "path": "../../packages/typescript"
     }
   ]
 }

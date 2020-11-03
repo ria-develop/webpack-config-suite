@@ -1,6 +1,6 @@
 import {
   BaseConfig,
-  CacheThreadRuleAwareConfig,
+  CacheThreadRule,
   CssLoaderOptions,
   ExtractCssLoaderOptions,
   getLoader,
@@ -11,7 +11,7 @@ import {CssExtension, CssPlugins} from './index';
 import {RuleSetUseItem} from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export class CssConfig extends CacheThreadRuleAwareConfig {
+export class CssConfig extends CacheThreadRule {
   public get composed(): typeof BaseConfig[] {
     return [CssExtension, CssPlugins];
   }

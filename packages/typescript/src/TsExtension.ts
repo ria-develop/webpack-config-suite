@@ -1,6 +1,6 @@
-import {ExtensionsAwareConfig} from '@webpack-config-suite/core';
+import {ResolveExtensions} from '@webpack-config-suite/core';
 
-export class TsExtension extends ExtensionsAwareConfig {
+export class TsExtension extends ResolveExtensions {
   protected get extensions(): string[] {
     return ['.ts'];
   }

@@ -1,10 +1,10 @@
 import {BaseConfig} from '@webpack-config-suite/core';
 import {BabelConfig} from './BabelConfig';
-import {JsxExtensions, HotModuleReplacementConfig} from './';
+import {HotModuleReplacementConfig, JsxExtension} from './';
 
 export class BabelReactConfig extends BabelConfig {
   public get composed(): typeof BaseConfig[] {
-    return [JsxExtensions, this.isHot && HotModuleReplacementConfig].filter(Boolean);
+    return super.composed.concat([JsxExtension, this.isHot && HotModuleReplacementConfig]).filter(Boolean);
   }
 
   protected get test(): RegExp | string {

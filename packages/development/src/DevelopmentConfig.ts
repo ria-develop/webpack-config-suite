@@ -1,8 +1,8 @@
-import {WebpackCliOptions, PluginsAwareConfig} from '@webpack-config-suite/core';
+import {Plugins, WebpackCliOptions} from '@webpack-config-suite/core';
 import {Configuration} from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export class DevelopmentConfig extends PluginsAwareConfig {
+export class DevelopmentConfig extends Plugins {
   protected get htmlWebpackPlugin(): HtmlWebpackPlugin {
     return new HtmlWebpackPlugin({template: './template.html'});
   }

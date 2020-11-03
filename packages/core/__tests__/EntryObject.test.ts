@@ -1,4 +1,4 @@
-import {ObjectEntryConfig, WebpackCliOptions} from '../src';
+import {EntryObject, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
 import {TestCases} from '../../../jest/TestCases';
 
@@ -8,7 +8,7 @@ describe.each(TestCases)(
     it('given DefaultObjectEntryConfig should match snapshot', () => {
       const config: Configuration = {mode};
 
-      class DefaultObjectEntryConfig extends ObjectEntryConfig {}
+      class DefaultObjectEntryConfig extends EntryObject {}
       new DefaultObjectEntryConfig(config, env, argv);
       expect(config).toMatchSnapshot();
     });
@@ -16,7 +16,7 @@ describe.each(TestCases)(
     it('given CustomEntryConfig should match snapshot', () => {
       const config: Configuration = {mode};
 
-      class CustomEntryConfig extends ObjectEntryConfig {
+      class CustomEntryConfig extends EntryObject {
         protected get sources(): string | [string, ...string[]] {
           return [`./src/index${(this.isHot && '.hot') || ''}.tsx`, './src/main.css'];
         }
@@ -32,7 +32,7 @@ describe.each(TestCases)(
     it('given MultipleEntries should match snapshot', () => {
       const config: Configuration = {mode};
 
-      class ApplicationEntry extends ObjectEntryConfig {
+      class ApplicationEntry extends EntryObject {
         protected get sources(): string | [string, ...string[]] {
           return [`./src/index${(this.isHot && '.hot') || ''}.tsx`, './src/main.css'];
         }
@@ -46,7 +46,7 @@ describe.each(TestCases)(
         }
       }
 
-      class VendorsEntry extends ObjectEntryConfig {
+      class VendorsEntry extends EntryObject {
         protected get sources(): string | [string, ...string[]] {
           return ['react', 'react-dom', 'prop-types'];
         }

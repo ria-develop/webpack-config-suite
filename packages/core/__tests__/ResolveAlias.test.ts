@@ -1,14 +1,14 @@
-import {AliasAwareConfig} from '../src';
+import {ResolveAlias} from '../src';
 import {Configuration} from 'webpack';
 
-describe('given AliasAwareConfig', () => {
+describe('given ResolveAlias', () => {
   const mode: Configuration['mode'] = 'development',
     env = undefined,
     argv = {};
   it('should create alias"', () => {
     const alias = {some: 'alias'};
 
-    class AliasAwareConfigDefault extends AliasAwareConfig {
+    class AliasAwareConfigDefault extends ResolveAlias {
       protected get alias(): Configuration['resolve']['alias'] {
         return Object.assign(super['alias'], alias);
       }
@@ -23,7 +23,7 @@ describe('given AliasAwareConfig', () => {
     const alias = {some: 'alias'};
     const existing = {another: 'alias'};
 
-    class AliasAwareConfigDefault extends AliasAwareConfig {
+    class AliasAwareConfigDefault extends ResolveAlias {
       protected get alias(): Configuration['resolve']['alias'] {
         return alias;
       }
@@ -35,7 +35,7 @@ describe('given AliasAwareConfig', () => {
   });
 
   it('should provide empty alias"', () => {
-    class AliasAwareConfigDefault extends AliasAwareConfig {
+    class AliasAwareConfigDefault extends ResolveAlias {
       protected get alias(): Configuration['resolve']['alias'] {
         return undefined;
       }

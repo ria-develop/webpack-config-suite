@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given ResolvePlugins should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {
+    "plugins": Array [],
+  },
+}
+`;

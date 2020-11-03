@@ -1,8 +1,8 @@
 import {WebpackCliOptions} from './index';
 import {Configuration, RuleSetRule, RuleSetUseItem} from 'webpack';
-import {ModuleAwareConfig} from './ModuleAwareConfig';
+import {Module} from './Module';
 
-export class RuleSetAwareConfig extends ModuleAwareConfig {
+export class ModuleRules extends Module {
   protected get test(): RegExp | string {
     return undefined;
   }

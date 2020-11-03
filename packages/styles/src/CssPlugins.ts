@@ -1,8 +1,8 @@
 import ExtractCssPlugin from 'mini-css-extract-plugin';
-import {PluginsAwareConfig, MiniCssExtractPluginOptions} from '@webpack-config-suite/core';
+import {MiniCssExtractPluginOptions, Plugins} from '@webpack-config-suite/core';
 import {Configuration} from 'webpack';
 
-export class CssPlugins extends PluginsAwareConfig {
+export class CssPlugins extends Plugins {
   protected get extractCssPluginOptions(): MiniCssExtractPluginOptions {
     return undefined;
   }

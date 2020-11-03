@@ -1,4 +1,4 @@
-import {CacheThreadRuleAwareConfig, WebpackCliOptions} from '../src';
+import {CacheThreadRule, WebpackCliOptions} from '../../src';
 import {Configuration} from 'webpack';
 
 describe.each([
@@ -7,9 +7,9 @@ describe.each([
 ])(
   'given mode: "%s", env: "%j", argv: "%j"',
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
-    it('given CacheThreadRuleAwareConfig should match snapshot', () => {
+    it('given CacheThreadRule should match snapshot', () => {
       const config: Configuration = {mode};
-      class MyCacheThreadRuleAwareConfig extends CacheThreadRuleAwareConfig {
+      class MyCacheThreadRuleAwareConfig extends CacheThreadRule {
         protected get numWorkers(): number {
           return 1;
         }
@@ -17,9 +17,9 @@ describe.each([
       new MyCacheThreadRuleAwareConfig(config, env, argv);
       expect(config).toMatchSnapshot();
     });
-    it('given CacheThreadRuleAwareConfig should match snapshot', () => {
+    it('given CacheThreadRule should match snapshot', () => {
       const config: Configuration = {mode};
-      class MyCacheThreadRuleAwareConfig extends CacheThreadRuleAwareConfig {
+      class MyCacheThreadRuleAwareConfig extends CacheThreadRule {
         protected get numWorkers(): number {
           return 1;
         }

@@ -83,6 +83,9 @@ Object {
     "alias": Object {
       "react-dom": "@hot-loader/react-dom",
     },
+    "extensions": Array [
+      ".jsx",
+    ],
   },
   "target": "web",
 }
@@ -173,7 +176,11 @@ Object {
       },
     ],
   },
-  "resolve": Object {},
+  "resolve": Object {
+    "extensions": Array [
+      ".jsx",
+    ],
+  },
 }
 `;
 

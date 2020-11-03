@@ -1,7 +1,7 @@
-import {AliasAwareConfig, WebpackCliOptions} from '@webpack-config-suite/core';
+import {ResolveAlias, WebpackCliOptions} from '@webpack-config-suite/core';
 import {Configuration} from 'webpack';
 
-export class HotModuleReplacementConfig extends AliasAwareConfig {
+export class HotModuleReplacementConfig extends ResolveAlias {
   protected get alias(): Configuration['resolve']['alias'] {
     return this.isHot && {'react-dom': '@hot-loader/react-dom'};
   }

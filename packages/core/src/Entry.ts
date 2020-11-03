@@ -1,13 +1,13 @@
 import {BaseConfig} from './BaseConfig';
-import {Configuration, Entry} from 'webpack';
+import {Configuration, Entry as WebpackEntry} from 'webpack';
 import {WebpackCliOptions} from './index';
 
-export class EntryConfig extends BaseConfig {
+export class Entry extends BaseConfig {
   protected get sources(): string | [string, ...string[]] {
     return './src';
   }
 
-  protected get entry(): Entry {
+  protected get entry(): WebpackEntry {
     return this.sources;
   }
 
@@ -15,6 +15,8 @@ export class EntryConfig extends BaseConfig {
     super(config, env, argv);
     const {entry} = this.config;
     this.config.entry =
-      entry instanceof Object && this.entry instanceof Object ? ({...entry, ...this.entry} as Entry) : this.entry;
+      entry instanceof Object && this.entry instanceof Object
+        ? ({...entry, ...this.entry} as WebpackEntry)
+        : this.entry;
   }
 }

@@ -1,6 +1,6 @@
-import {ExtensionsAwareConfig} from '@webpack-config-suite/core';
+import {ResolveExtensions} from '@webpack-config-suite/core';
 
-export class LessExtension extends ExtensionsAwareConfig {
+export class LessExtension extends ResolveExtensions {
   protected get extensions(): string[] {
     return ['.less'];
   }

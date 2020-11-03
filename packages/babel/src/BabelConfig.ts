@@ -1,7 +1,7 @@
 import {
   BabelLoaderOptions as BabelLoaderOptionsFromSchema,
   BaseConfig,
-  CacheThreadRuleAwareConfig,
+  CacheThreadRule,
   getLoader,
   JsExtension
 } from '@webpack-config-suite/core';
@@ -13,7 +13,7 @@ import {TransformOptions} from 'babel__core';
 
 export type BabelLoaderOptions = TransformOptions & BabelLoaderOptionsFromSchema;
 
-export class BabelConfig extends CacheThreadRuleAwareConfig {
+export class BabelConfig extends CacheThreadRule {
   static BABEL_PRESET_ENV: '@babel/preset-env' = '@babel/preset-env';
 
   static BABEL_PRESET_REACT: '@babel/preset-react' = '@babel/preset-react';
