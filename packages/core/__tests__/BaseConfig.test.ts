@@ -1,6 +1,6 @@
 import {BaseConfig, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
-import {TestCases} from '../../../jest/TestCases';
+import {TestCases} from '../jest';
 
 describe.each(TestCases)(
   'given mode: "%s", env: "%j", argv: "%j"',

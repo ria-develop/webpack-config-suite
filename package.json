@@ -13,8 +13,9 @@
     "watch": "yarn build -- --parallel -- -w",
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
-    "test": "lerna run test -- --coverage",
-    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
+    "test": "jest",
+    "test:coverage": "yarn test --coverage",
+    "test:coveralls": "yarn test:coverage && coveralls < coverage/lcov.info",
     "test:watch": "lerna run test --parallel -- --coverage --watchAll",
     "example:run": "lerna run start --stream"
   },

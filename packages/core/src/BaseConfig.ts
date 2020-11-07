@@ -12,7 +12,7 @@ export class BaseConfig {
   argv: WebpackCliOptions;
   config: Configuration;
 
-  constructor(config: Configuration, env: unknown, argv: WebpackCliOptions) {
+  constructor(config: Configuration = {}, env: unknown = undefined, argv: WebpackCliOptions = {}) {
     this.env = env;
     this.argv = argv;
     this.config = config;

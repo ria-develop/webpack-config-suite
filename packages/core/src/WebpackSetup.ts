@@ -27,7 +27,7 @@ export class WebpackSetup {
     }
 
     function process(configs) {
-      configs.forEach((Config) => {
+      (configs || []).forEach((Config) => {
         if (processed.has(Config)) {
           return;
         }

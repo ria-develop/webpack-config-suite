@@ -2,6 +2,7 @@ import {WebpackCliOptions} from '@webpack-config-suite/core';
 import {Configuration, RuleSetRule, RuleSetUseItem} from 'webpack';
 import {CssConfig, LessConfig} from '../src';
 import path from 'path';
+import {testProcessConfig} from '../../../jest';
 
 const relativePaths = (item: RuleSetUseItem): RuleSetUseItem => {
   if (typeof item === 'object') {
@@ -32,7 +33,7 @@ describe.each([
           return 1;
         }
       }
-      new MyCssConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      testProcessConfig(MyCssConfig, config, env, argv);
       config.module.rules = config.module.rules.map<RuleSetRule>(fixPaths);
       expect(config).toMatchSnapshot();
     });
@@ -43,7 +44,7 @@ describe.each([
           return 1;
         }
       }
-      new MyLessConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      testProcessConfig(MyLessConfig, config, env, argv);
       config.module.rules = config.module.rules.map<RuleSetRule>(fixPaths);
       expect(config).toMatchSnapshot();
     });

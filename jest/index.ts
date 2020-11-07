@@ -1,5 +1,5 @@
+import {processConfig, WebpackCliOptions, What} from '@webpack-config-suite/core';
 import {Configuration} from 'webpack';
-import {WebpackCliOptions} from '../packages/core/src';
 
 type TestCase = [Configuration['mode'], unknown, WebpackCliOptions];
 
@@ -10,3 +10,15 @@ export const TestCases: TestCase[] = [
   ['development', undefined, {liveReload: false, hot: false}],
   ['production', undefined, {liveReload: true, hot: true}]
 ];
+
+export function testProcessConfig(
+  Entity: What,
+  config: Configuration,
+  env: unknown = undefined,
+  argv: WebpackCliOptions = {}
+): void {
+  const composed = processConfig(Entity, config, env, argv);
+  if (composed) {
+    composed.forEach((ComposedConfig) => testProcessConfig(ComposedConfig, config, env, argv));
+  }
+}

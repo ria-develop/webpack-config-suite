@@ -23,7 +23,7 @@ describe('is() test suite', () => {
     expect(is(MyConfig, BaseConfig)).toEqual(false);
   });
 });
-describe('processConfig() test suite', () => {
+describe('testProcessConfig() test suite', () => {
   it('should process class based on BaseConfig and return composed configs', () => {
     class MyConfig extends BaseConfig {
       public get composed() {
@@ -33,9 +33,11 @@ describe('processConfig() test suite', () => {
 
     expect(processConfig(MyConfig)).toEqual([BaseConfig]);
   });
+
   it('should process function which returns composed configs', () => {
     expect(processConfig(() => [BaseConfig])).toEqual([BaseConfig]);
   });
+
   it('should not process anything', () => {
     expect(processConfig(undefined)).toBeUndefined();
   });

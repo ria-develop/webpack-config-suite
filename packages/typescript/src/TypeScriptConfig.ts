@@ -13,7 +13,7 @@ export class TypeScriptConfig extends BabelConfig {
   static BABEL_PRESET_TYPESCRIPT = '@babel/preset-typescript';
 
   public get composed(): typeof BaseConfig[] {
-    return [TsExtension, this.isSingleOrDevMode && TypeScriptPlugins].filter(Boolean);
+    return [TsExtension, TypeScriptPlugins];
   }
 
   //--------------------------------------------------------------------------------------------------------------------

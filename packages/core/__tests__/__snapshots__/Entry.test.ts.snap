@@ -2,35 +2,35 @@
 
 exports[`given mode: "development", env: "undefined", argv: "{"liveReload":false,"hot":false}" should match snapshot 1`] = `
 Object {
-  "entry": "./src",
+  "entry": "src/dev",
   "mode": "development",
 }
 `;
 
 exports[`given mode: "development", env: "undefined", argv: "{"liveReload":true,"hot":true}" should match snapshot 1`] = `
 Object {
-  "entry": "./src",
+  "entry": "src/prod",
   "mode": "development",
 }
 `;
 
 exports[`given mode: "development", env: "undefined", argv: "{"mode":"development"}" should match snapshot 1`] = `
 Object {
-  "entry": "./src",
+  "entry": "src/dev",
   "mode": "development",
 }
 `;
 
 exports[`given mode: "production", env: "undefined", argv: "{"liveReload":true,"hot":true}" should match snapshot 1`] = `
 Object {
-  "entry": "./src",
+  "entry": "src/prod",
   "mode": "production",
 }
 `;
 
 exports[`given mode: "production", env: "undefined", argv: "{"mode":"production"}" should match snapshot 1`] = `
 Object {
-  "entry": "./src",
+  "entry": "src/prod",
   "mode": "production",
 }
 `;

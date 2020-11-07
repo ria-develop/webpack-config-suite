@@ -38,12 +38,15 @@ export class TypeScriptPlugins extends Plugins {
     moduleName?: string;
     mode?: string;
     excludedReferences?: string[];
-  } {
-    return {};
+  }[] {
+    return [];
   }
 
   protected get declarationBundlerPlugins(): DeclarationBundlerPlugin[] {
-    return [this.isSingleOrDevMode && new DeclarationBundlerPlugin(this.declarationBundlerOptions)].filter(Boolean);
+    if (!this.isSingleOrDevMode) {
+      return [];
+    }
+    return this.declarationBundlerOptions.map((options) => new DeclarationBundlerPlugin(options));
   }
 
   get plugins(): Configuration['plugins'] {

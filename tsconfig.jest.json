@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig.settings.json",
-  "include": ["**/__tests__/**/*"]
+  "include": ["**/__tests__/**/*",  "jest/*"]
 }

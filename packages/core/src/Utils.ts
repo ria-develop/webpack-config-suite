@@ -15,9 +15,9 @@ export function is(instance: any, of: any): boolean {
 
 export function processConfig(Entity: any, ...args): What[] {
   if (is(Entity, BaseConfig)) {
-    return new Entity(...args).composed || [];
+    return new Entity(...args).composed;
   } else if (is(Entity, Function)) {
-    return Entity(...args) || [];
+    return Entity(...args);
   }
   return undefined;
 }

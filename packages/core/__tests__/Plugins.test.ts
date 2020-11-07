@@ -1,5 +1,6 @@
 import {Plugins, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
+import {testProcessConfig} from '../jest';
 
 describe.each([['development', undefined, {}]])(
   'given mode: "%s", env: "%j", argv: "%j"',
@@ -32,9 +33,8 @@ describe.each([['development', undefined, {}]])(
           ]);
         }
       }
-
-      new MyPluginsConfig(config, env, argv);
-      new MyOtherPluginsConfig(config, env, argv);
+      testProcessConfig(MyPluginsConfig, config, env, argv);
+      testProcessConfig(MyOtherPluginsConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }

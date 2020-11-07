@@ -9,5 +9,4 @@ before_install:
 install: yarn install
 
 script:
-  - jest --clearCache
   - yarn test:coveralls

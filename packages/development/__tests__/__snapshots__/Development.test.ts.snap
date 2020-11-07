@@ -4,7 +4,6 @@ exports[`given MyDevelopmentConfig should match snapshot should should match sna
 Object {
   "devtool": "eval",
   "mode": "development",
-  "plugins": Array [],
 }
 `;
 
@@ -86,13 +85,12 @@ exports[`given mode: "development", env: "undefined", argv: "{}" given Developme
 Object {
   "devtool": "eval",
   "mode": "development",
-  "plugins": Array [],
 }
 `;
 
-exports[`given mode: "production", env: "undefined", argv: "%j" given DevelopmentConfig should match snapshot 1`] = `
+exports[`given mode: "production", env: "undefined", argv: "{}" given DevelopmentConfig should match snapshot 1`] = `
 Object {
+  "devtool": "none",
   "mode": "production",
-  "plugins": Array [],
 }
 `;

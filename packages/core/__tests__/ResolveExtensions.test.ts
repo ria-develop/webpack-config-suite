@@ -1,5 +1,6 @@
 import {JsExtension, ResolveExtensions, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
+import {testProcessConfig} from '../jest';
 
 describe.each([['development', undefined, {}]])(
   'given mode: "%s", env: "%j", argv: "%j"',
@@ -7,13 +8,13 @@ describe.each([['development', undefined, {}]])(
     it('given ResolveExtensions should match snapshot', () => {
       const config: Configuration = {mode};
 
-      new ResolveExtensions(config, env, argv);
+      testProcessConfig(ResolveExtensions, config, env, argv);
       expect(config).toMatchSnapshot();
     });
     it('given JsExtension should match snapshot', () => {
       const config: Configuration = {mode};
 
-      new JsExtension(config, env, argv);
+      testProcessConfig(JsExtension, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }

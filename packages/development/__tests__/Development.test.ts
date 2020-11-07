@@ -2,19 +2,20 @@ import {WebpackCliOptions} from '@webpack-config-suite/core';
 import {Configuration} from 'webpack';
 import {DevelopmentConfig} from '../src';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import {testProcessConfig} from '../../../jest';
 
 describe.each([
   ['development', undefined, {}],
   ['development', undefined, {hot: true}],
   ['development', undefined, {liveReload: true}],
-  ['production', undefined]
+  ['production', undefined, {}]
 ])(
   'given mode: "%s", env: "%j", argv: "%j"',
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
     it('given DevelopmentConfig should match snapshot', () => {
       const config: Configuration = {mode};
 
-      new DevelopmentConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      testProcessConfig(DevelopmentConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }
@@ -30,7 +31,7 @@ describe('given MyDevelopmentConfig should match snapshot', () => {
       }
     }
 
-    new MyDevelopmentConfig(config, undefined, {hot: true});
+    testProcessConfig(MyDevelopmentConfig, config);
     expect(config).toMatchSnapshot();
   });
 });

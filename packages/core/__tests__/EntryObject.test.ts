@@ -1,6 +1,6 @@
 import {EntryObject, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
-import {TestCases} from '../../../jest/TestCases';
+import {TestCases, testProcessConfig} from '../jest';
 
 describe.each(TestCases)(
   'given mode: "%s", env: "%j", argv: "%j"',
@@ -9,7 +9,7 @@ describe.each(TestCases)(
       const config: Configuration = {mode};
 
       class DefaultObjectEntryConfig extends EntryObject {}
-      new DefaultObjectEntryConfig(config, env, argv);
+      testProcessConfig(DefaultObjectEntryConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
 
@@ -25,7 +25,7 @@ describe.each(TestCases)(
           return 'app-name';
         }
       }
-      new CustomEntryConfig(config, env, argv);
+      testProcessConfig(CustomEntryConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
 
@@ -55,9 +55,8 @@ describe.each(TestCases)(
           return 'react-vendors';
         }
       }
-
-      new ApplicationEntry(config, env, argv);
-      new VendorsEntry(config, env, argv);
+      testProcessConfig(ApplicationEntry, config, env, argv);
+      testProcessConfig(VendorsEntry, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }

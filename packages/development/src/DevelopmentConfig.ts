@@ -7,15 +7,16 @@ export class DevelopmentConfig extends Plugins {
     return new HtmlWebpackPlugin({template: './template.html'});
   }
 
+  protected get plugins(): Configuration['plugins'] {
+    return [(this.isHot || this.isLiveReload) && this.htmlWebpackPlugin];
+  }
+
+  protected get devtool(): Configuration['devtool'] {
+    return this.isDev ? 'eval' : 'none';
+  }
+
   constructor(config: Configuration, env: unknown, argv: WebpackCliOptions) {
     super(config, env, argv);
-    if (this.isDev) {
-      config.devtool = 'eval';
-      if (this.isHot || this.isLiveReload) {
-        if (this.htmlWebpackPlugin) {
-          config.plugins.push(this.htmlWebpackPlugin);
-        }
-      }
-    }
+    config.devtool = this.devtool;
   }
 }

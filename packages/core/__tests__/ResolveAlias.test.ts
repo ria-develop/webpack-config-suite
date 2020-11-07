@@ -1,5 +1,6 @@
 import {ResolveAlias} from '../src';
 import {Configuration} from 'webpack';
+import {testProcessConfig} from '../jest';
 
 describe('given ResolveAlias', () => {
   const mode: Configuration['mode'] = 'development',
@@ -15,7 +16,7 @@ describe('given ResolveAlias', () => {
     }
 
     const config = {mode};
-    new AliasAwareConfigDefault(config, env, argv);
+    testProcessConfig(AliasAwareConfigDefault, config, env, argv);
     expect(config).toEqual({mode, resolve: {alias}});
   });
 
@@ -30,7 +31,7 @@ describe('given ResolveAlias', () => {
     }
 
     const config = {mode, resolve: {alias: existing}};
-    new AliasAwareConfigDefault(config, env, argv);
+    testProcessConfig(AliasAwareConfigDefault, config, env, argv);
     expect(config).toEqual({mode, resolve: {alias: {...existing, ...alias}}});
   });
 
@@ -42,7 +43,7 @@ describe('given ResolveAlias', () => {
     }
 
     const config = {mode, resolve: {}};
-    new AliasAwareConfigDefault(config, env, argv);
+    testProcessConfig(AliasAwareConfigDefault, config, env, argv);
     expect(config).toEqual({mode, resolve: {}});
   });
 });

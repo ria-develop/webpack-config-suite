@@ -1,5 +1,6 @@
 import {CacheThreadRule, WebpackCliOptions} from '../../src';
 import {Configuration} from 'webpack';
+import {testProcessConfig} from '../../jest';
 
 describe.each([
   ['development', undefined, {}],
@@ -14,7 +15,7 @@ describe.each([
           return 1;
         }
       }
-      new MyCacheThreadRuleAwareConfig(config, env, argv);
+      testProcessConfig(MyCacheThreadRuleAwareConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
     it('given CacheThreadRule should match snapshot', () => {
@@ -31,7 +32,7 @@ describe.each([
           return false;
         }
       }
-      new MyCacheThreadRuleAwareConfig(config, env, argv);
+      testProcessConfig(MyCacheThreadRuleAwareConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }

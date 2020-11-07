@@ -1,6 +1,7 @@
-import {WebpackCliOptions} from '@webpack-config-suite/core';
+import {WebpackCliOptions} from '../../core/src';
 import {Configuration} from 'webpack';
 import {BabelConfig, BabelReactConfig, HotModuleReplacementConfig} from '../src';
+import {testProcessConfig} from '../../../jest';
 
 describe.each([
   ['development', undefined, {}],
@@ -15,7 +16,7 @@ describe.each([
           return 1;
         }
       }
-      new MyBabelConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      testProcessConfig(MyBabelConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
     it('given BabelReactConfig should match snapshot', () => {
@@ -25,13 +26,13 @@ describe.each([
           return 1;
         }
       }
-      new MyBabelReactConfig(config, env, argv).composed.forEach((Config) => new Config(config, env, argv));
+      testProcessConfig(MyBabelReactConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
     it('given HotModuleReplacementConfig should match snapshot', () => {
       const config: Configuration = {mode};
 
-      new HotModuleReplacementConfig(config, env, argv);
+      testProcessConfig(HotModuleReplacementConfig, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }
