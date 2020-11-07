@@ -37,3 +37,8 @@ export default WebpackSetup.newSetup()
 ```shell script
 git clone https://github.com/ria-develop/webpack-config-suite.git && cd webpack-config-suite && yarn && yarn example:run
 ```
+### Alternatives
+If you don't fill comfortable with a pure object oriented Javascript/Typescript
+you may find alternatives here
+* https://github.com/namics/webpack-config-plugins.git
+* https://github.com/symfony/webpack-encore
