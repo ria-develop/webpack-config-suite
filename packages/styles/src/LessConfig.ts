@@ -1,9 +1,9 @@
-import {BaseConfig, LessLoaderOptions, getLoader} from '@webpack-config-suite/core';
-import {LessExtension, CssConfig} from './index';
+import {getLoader, LessLoaderOptions, What} from '@webpack-config-suite/core';
+import {CssConfig, LessExtension} from './index';
 import {RuleSetUseItem} from 'webpack';
 
 export class LessConfig extends CssConfig {
-  public get composed(): typeof BaseConfig[] {
+  public get composed(): What[] {
     return [LessExtension];
   }
 

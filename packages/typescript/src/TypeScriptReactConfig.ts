@@ -1,10 +1,10 @@
-import {TypeScriptConfig, TsxExtension} from './';
+import {TsxExtension, TypeScriptConfig} from './';
 
-import {BaseConfig} from '@webpack-config-suite/core';
+import {What} from '@webpack-config-suite/core';
 import {HotModuleReplacementConfig} from '@webpack-config-suite/babel';
 
 export class TypeScriptReactConfig extends TypeScriptConfig {
-  public get composed(): typeof BaseConfig[] {
+  public get composed(): What[] {
     return super.composed.concat([TsxExtension, this.isHot && HotModuleReplacementConfig]).filter(Boolean);
   }
 

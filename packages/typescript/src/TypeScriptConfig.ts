@@ -1,6 +1,6 @@
 import {TsExtension, TypeScriptPlugins} from './';
 
-import {BaseConfig} from '@webpack-config-suite/core';
+import {What} from '@webpack-config-suite/core';
 import {RuleSetUseItem} from 'webpack';
 import {BabelConfig} from '@webpack-config-suite/babel';
 import {Options as BabelPresetEnvOptions} from '@babel/preset-env';
@@ -12,7 +12,7 @@ export type TsLoaderOptions = Partial<StrictTsLoaderOptions>;
 export class TypeScriptConfig extends BabelConfig {
   static BABEL_PRESET_TYPESCRIPT = '@babel/preset-typescript';
 
-  public get composed(): typeof BaseConfig[] {
+  public get composed(): What[] {
     return [TsExtension, TypeScriptPlugins];
   }
 

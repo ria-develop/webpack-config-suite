@@ -90,7 +90,7 @@ Object {
 
 exports[`given mode: "production", env: "undefined", argv: "{}" given DevelopmentConfig should match snapshot 1`] = `
 Object {
-  "devtool": "none",
+  "devtool": false,
   "mode": "production",
 }
 `;

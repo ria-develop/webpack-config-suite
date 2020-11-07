@@ -1,9 +1,9 @@
 import {
   BabelLoaderOptions as BabelLoaderOptionsFromSchema,
-  BaseConfig,
   CacheThreadRule,
   getLoader,
-  JsExtension
+  JsExtension,
+  What
 } from '@webpack-config-suite/core';
 import {RuleSetUseItem} from 'webpack';
 import {PluginItem} from '@babel/core';
@@ -20,7 +20,7 @@ export class BabelConfig extends CacheThreadRule {
 
   static BABEL_PLUGIN_HOT_LOADER: 'react-hot-loader/babel' = 'react-hot-loader/babel';
 
-  public get composed(): typeof BaseConfig[] {
+  public get composed(): What[] {
     return [JsExtension];
   }
 

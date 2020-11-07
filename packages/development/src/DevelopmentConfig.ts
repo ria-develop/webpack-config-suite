@@ -12,7 +12,7 @@ export class DevelopmentConfig extends Plugins {
   }
 
   protected get devtool(): Configuration['devtool'] {
-    return this.isDev ? 'eval' : 'none';
+    return this.isDev ? 'eval' : false;
   }
 
   constructor(config: Configuration, env: unknown, argv: WebpackCliOptions) {

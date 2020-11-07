@@ -1,10 +1,10 @@
-import {WebpackCliOptions} from './index';
+import {WebpackCliOptions, What} from './index';
 
 import {Configuration} from 'webpack';
 
 export class BaseConfig {
   //workaround as long as issue opened https://github.com/microsoft/TypeScript/issues/37142
-  public get composed(): typeof BaseConfig[] {
+  public get composed(): What[] {
     return [];
   }
 

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "sourceRoot": "../src",
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "esModuleInterop": true
+  },
+  "references": [
+    {
+      "path": "../../packages/core"
+    },
+    {
+      "path": "../../packages/babel"
+    },
+    {
+      "path": "../../packages/styles"
+    },
+    {
+      "path": "../../packages/development"
+    },
+    {
+      "path": "../../packages/typescript"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ export * from './Resolve';
 export * from './ResolveAlias';
 export * from './ResolveExtensions';
 export * from './ResolvePlugins';
+export * from './ResolveModules';
 export * from './Utils';
 export * from './WebpackSetup';
 export * from './impl/CacheThreadRule';
