@@ -1,6 +1,6 @@
 {
   "name": "@webpack-config-suite/example-typescript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --hot --mode=development"
@@ -16,11 +16,11 @@
   "devDependencies": {
     "@types/react": "^16.9.55",
     "@types/react-dom": "^16.9.9",
-    "@webpack-config-suite/babel": "^1.0.1",
-    "@webpack-config-suite/core": "^1.0.1",
-    "@webpack-config-suite/development": "^1.0.1",
-    "@webpack-config-suite/styles": "^1.0.1",
-    "@webpack-config-suite/typescript": "^1.0.1",
+    "@webpack-config-suite/babel": "^1.0.2",
+    "@webpack-config-suite/core": "^1.0.2",
+    "@webpack-config-suite/development": "^1.0.2",
+    "@webpack-config-suite/styles": "^1.0.2",
+    "@webpack-config-suite/typescript": "^1.0.2",
     "typescript": "*",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
