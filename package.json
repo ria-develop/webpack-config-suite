@@ -10,7 +10,7 @@
     "build-packages": "tsc -b packages",
     "build": "lerna run build",
     "clean": "lerna exec -- rm -rf lib cjs dist types coverage *.tsbuildinfo && rm -rf coverage && jest --clearCache",
-    "watch": "yarn build -w",
+    "watch": "yarn build -- --parallel -- -w",
     "postinstall": "yarn clean && yarn build && yarn run lint-types",
     "lint-types": "eslint --fix --rule \"@typescript-eslint/ban-types: off\" **/*.d.ts",
     "test": "lerna run test -- --coverage",
@@ -28,6 +28,7 @@
     "@types/jest": "^26.0.15",
     "@types/lodash": "^4.14.164",
     "@types/webpack-dev-server": "^3.11.1",
+    "coveralls": "^3.1.0",
     "eslint": "^7.12.1",
     "jest": "^26.6.1",
     "jest-mock-extended": "^1.0.10",
@@ -36,10 +37,13 @@
     "postcss": "^8.1.4",
     "postcss-loader": "^4.0.4",
     "prettier": "^2.1.2",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "ts-jest": "^26.4.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5",
-    "webpack": "^5.3.2"
+    "webpack": "^5.4.0"
   },
   "workspaces": [
     "example/*",
@@ -51,11 +55,6 @@
     ]
   },
   "dependencies": {
-    "coveralls": "^3.1.0",
-    "coveralls-lerna": "^0.0.5",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "tslib": "^2.0.3"
   }
 }

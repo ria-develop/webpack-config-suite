@@ -1,8 +1,8 @@
 import {Resolve} from './Resolve';
-import {Configuration, ResolveOptions} from 'webpack';
+import {Configuration} from 'webpack';
 
 export class ResolveExtensions extends Resolve {
-  protected get extensions(): ResolveOptions['extensions'] {
+  protected get extensions(): Configuration['resolve']['extensions'] {
     return [];
   }
 

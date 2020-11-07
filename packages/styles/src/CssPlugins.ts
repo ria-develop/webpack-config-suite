@@ -11,7 +11,7 @@ export class CssPlugins extends Plugins {
     return new ExtractCssPlugin(this.extractCssPluginOptions);
   }
 
-  get plugins(): Configuration['plugins'] | undefined {
+  get plugins(): Configuration['plugins'] {
     return [this.extractCssPlugin];
   }
 }

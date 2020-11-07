@@ -8,7 +8,7 @@ describe.each([['development', undefined, {}]])(
       const config: Configuration = {mode};
 
       class MyPluginsConfig extends Plugins {
-        get plugins(): Configuration['plugins'] | undefined {
+        get plugins(): Configuration['plugins'] {
           return super['plugins'].concat([
             {
               name: 'MyPluginOne',
@@ -21,7 +21,7 @@ describe.each([['development', undefined, {}]])(
       }
 
       class MyOtherPluginsConfig extends Plugins {
-        get plugins(): Configuration['plugins'] | undefined {
+        get plugins(): Configuration['plugins'] {
           return super['plugins'].concat([
             {
               name: 'MyPluginTwo',
