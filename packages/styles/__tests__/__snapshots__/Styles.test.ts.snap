@@ -14,8 +14,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": true,
-              "reloadAll": true,
             },
           },
           Object {
@@ -72,8 +70,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": true,
-              "reloadAll": true,
             },
           },
           Object {
@@ -117,8 +113,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": undefined,
-              "reloadAll": true,
             },
           },
           Object {
@@ -175,8 +169,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": undefined,
-              "reloadAll": true,
             },
           },
           Object {
@@ -220,8 +212,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": undefined,
-              "reloadAll": true,
             },
           },
           Object {
@@ -278,8 +268,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": undefined,
-              "reloadAll": true,
             },
           },
           Object {
@@ -323,8 +311,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": false,
-              "reloadAll": true,
             },
           },
           Object {
@@ -381,8 +367,6 @@ Object {
             "loader": "node_modules/mini-css-extract-plugin/dist/loader.js",
             "options": Object {
               "esModule": false,
-              "hmr": false,
-              "reloadAll": true,
             },
           },
           Object {

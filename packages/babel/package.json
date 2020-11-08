@@ -15,7 +15,8 @@
   },
   "files": [
     "lib",
-    "src"
+    "src",
+    "types"
   ],
   "publishConfig": {
     "access": "public"

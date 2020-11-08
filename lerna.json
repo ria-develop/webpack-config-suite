@@ -1,10 +1,8 @@
 {
   "packages": [
-    "example/*",
     "packages/*"
   ],
   "workspaces": [
-    "example/*",
     "packages/*"
   ],
   "npmClient": "yarn",

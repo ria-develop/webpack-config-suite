@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given NoResolveModules should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {},
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given ResolveModules should match snapshot 1`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {
+    "modules": Array [],
+  },
+}
+`;
+
+exports[`given mode: "development", env: "undefined", argv: "{}" given ResolveModules should match snapshot 2`] = `
+Object {
+  "mode": "development",
+  "resolve": Object {
+    "modules": Array [],
+    "plugins": Array [
+      [Function],
+    ],
+  },
+}
+`;

@@ -50,12 +50,7 @@ export class CssConfig extends CacheThreadRule {
 
   protected get extractCssLoaderOptions(): ExtractCssLoaderOptions {
     return {
-      esModule: false,
-      // only enable hot in development
-      //hmr: args.mode === 'development' && args.argv.hot,
-      hmr: this.isHot,
-      // if hmr does not work, this is a forceful method.
-      reloadAll: true
+      esModule: false
     };
   }
 

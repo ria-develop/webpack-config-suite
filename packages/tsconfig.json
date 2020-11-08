@@ -11,6 +11,9 @@
       "path": "development"
     },
     {
+      "path": "lerna"
+    },
+    {
       "path": "styles"
     },
     {

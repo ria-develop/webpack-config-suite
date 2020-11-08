@@ -52,11 +52,18 @@ export default WebpackSetup.newSetup()
   .newFactory();
 ```
 
-### Run example
+### Run Typescript project example
 
 ```shell script
-git clone https://github.com/ria-develop/webpack-config-suite.git && cd webpack-config-suite && yarn && yarn example:run
+git clone https://github.com/ria-develop/webpack-config-suite.git && cd webpack-config-suite && yarn && yarn example:typescript
 ```
+
+### Run Lerna + Typescript project example
+
+```shell script
+git clone https://github.com/ria-develop/webpack-config-suite.git && cd webpack-config-suite && yarn && yarn example:lerna
+```
+
 ### Alternatives
 If you don't fill comfortable with a pure object oriented Javascript/Typescript
 you may find alternatives here

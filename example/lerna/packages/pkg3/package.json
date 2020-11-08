@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
-  "module": "src/index.ts",
+  "types": "lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "tsc -b ."
@@ -14,5 +14,9 @@
   "dependencies": {
     "@webpack-config-suite/lerna-example-pkg1": "^1.0.0",
     "@webpack-config-suite/lerna-example-pkg2": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9"
   }
 }

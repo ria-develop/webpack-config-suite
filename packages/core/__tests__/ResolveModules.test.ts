@@ -1,29 +1,29 @@
-import {ResolvePlugins, WebpackCliOptions} from '../src';
+import {ResolveModules, WebpackCliOptions} from '../src';
 import {Configuration} from 'webpack';
 import {testProcessConfig} from '../jest';
 
 describe.each([['development', undefined, {}]])(
   'given mode: "%s", env: "%j", argv: "%j"',
   (mode: Configuration['mode'], env: unknown, argv: WebpackCliOptions): void => {
-    it('given ResolvePlugins should match snapshot', () => {
+    it('given ResolveModules should match snapshot', () => {
       const config: Configuration = {mode};
 
-      testProcessConfig(ResolvePlugins, config, env, argv);
+      testProcessConfig(ResolveModules, config, env, argv);
       expect(config).toMatchSnapshot();
       config.resolve.plugins = [() => true];
-      testProcessConfig(ResolvePlugins, config, env, argv);
+      testProcessConfig(ResolveModules, config, env, argv);
       expect(config).toMatchSnapshot();
     });
-    it('given NoResolvePlugins should match snapshot', () => {
+    it('given NoResolveModules should match snapshot', () => {
       const config: Configuration = {mode};
 
-      class NoResolvePlugins extends ResolvePlugins {
-        protected get plugins(): Configuration['resolve']['plugins'] {
+      class NoResolveModules extends ResolveModules {
+        protected get modules(): Configuration['resolve']['modules'] {
           return undefined;
         }
       }
 
-      testProcessConfig(NoResolvePlugins, config, env, argv);
+      testProcessConfig(NoResolveModules, config, env, argv);
       expect(config).toMatchSnapshot();
     });
   }
