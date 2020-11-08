@@ -1,6 +1,6 @@
 {
   "name": "@webpack-config-suite/babel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "> TODO: description",
   "author": "RIA-DEVELOP <github@ria-develop.pl>",
   "homepage": "",
@@ -28,6 +28,6 @@
     "coveralls": "coveralls < coverage/lcov.info"
   },
   "dependencies": {
-    "@webpack-config-suite/core": "^1.0.3"
+    "@webpack-config-suite/core": "^1.0.4"
   }
 }

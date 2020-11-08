@@ -1,6 +1,6 @@
 {
   "name": "@webpack-config-suite/lerna",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "RIA-DEVELOP <github@ria-develop.pl>",
   "homepage": "",
@@ -29,8 +29,8 @@
   "dependencies": {
     "@lerna/package": "^3.16.0",
     "@lerna/project": "^3.21.0",
-    "@webpack-config-suite/babel": "^1.0.3",
-    "@webpack-config-suite/core": "^1.0.3",
-    "@webpack-config-suite/typescript": "^1.0.3"
+    "@webpack-config-suite/babel": "^1.0.4",
+    "@webpack-config-suite/core": "^1.0.4",
+    "@webpack-config-suite/typescript": "^1.0.4"
   }
 }
