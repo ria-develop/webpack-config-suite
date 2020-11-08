@@ -13,4 +13,8 @@ export default WebpackSetup.newSetup()
   .use(BabelReactConfig)
   .use(TypeScriptReactConfig)
   .use(DevelopmentConfig)
+  .use((config) => {
+    config.resolve.symlinks = false;
+    config.watch = false;
+  })
   .newFactory();

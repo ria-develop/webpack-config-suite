@@ -15,7 +15,8 @@
   "files": [
     "lib",
     "src",
-    "types"
+    "types",
+    "compileSchemas.js"
   ],
   "scripts": {
     "build": "tsc -b .",
