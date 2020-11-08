@@ -13,7 +13,7 @@
     "build:packages": "tsc -b packages",
     "build": "lerna run build",
     "do-release-upgrade": "npx ncu -u && npx lerna exec npx -- ncu -u",
-    "preinstall": "yarn clean && yarn do-release-upgrade",
+    "preinstall": "yarn clean",
     "clean": "lerna clean --yes && lerna exec -- rm -rf lib cjs dist types coverage *.tsbuildinfo && rm -rf coverage && jest --clearCache",
     "watch": "yarn build -- --parallel -- -w",
     "postinstall": "yarn build:packages && yarn run lint-types",
