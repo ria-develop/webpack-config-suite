@@ -11,12 +11,12 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "@types/react": "^16.9.56",
-    "@types/react-dom": "^16.9.9",
-    "eslint": "^7.13.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "eslint": "^7.14.0",
     "less": "^3.12.2",
-    "postcss": "^8.1.6",
-    "prettier": "^2.1.2",
+    "postcss": "^8.1.9",
+    "prettier": "^2.2.0",
     "ts-node": "file:../../node_modules/ts-node",
     "typescript": "file:../../node_modules/typescript",
     "webpack": "file:../../node_modules/webpack",
