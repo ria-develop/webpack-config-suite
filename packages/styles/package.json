@@ -1,6 +1,6 @@
 {
   "name": "@webpack-config-suite/styles",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "> TODO: description",
   "author": "RIA-DEVELOP <github@ria-develop.pl>",
   "homepage": "",
@@ -26,6 +26,6 @@
     "coveralls": "coveralls < coverage/lcov.info"
   },
   "dependencies": {
-    "@webpack-config-suite/core": "^1.0.7"
+    "@webpack-config-suite/core": "^1.0.8"
   }
 }
