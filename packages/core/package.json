@@ -20,8 +20,7 @@
   ],
   "scripts": {
     "build": "tsc -b .",
-    "preinstall": "rm -rf types",
-    "prebuild": "node compileSchemas.js",
+    "prebuild": "rm -rf types && node compileSchemas.js",
     "test": "jest",
     "coveralls": "coveralls < coverage/lcov.info"
   },
